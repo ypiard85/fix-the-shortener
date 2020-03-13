@@ -145,9 +145,9 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 		</style>
 	</head>
 	<body>
-		<div class="background"><img src="img/background.svg"></div>
+		<div class="background"><img src="/img/background.svg"></div>
 
-		<a href="/"><img src="img/logo.png" class="logo"></a>
+		<a href="/"><img src="/img/logo.png" class="logo"></a>
 
 		<div class="container">
 			<?php if(isset($_SESSION['user'])): ?>
