@@ -80,7 +80,8 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 				border-radius: 4px;
 				box-shadow: 2px 2px 7px 0px #00000029;
 				padding:5px;
-				width: fit-content;
+				width: -moz-fit-content;
+                width: fit-content;
 				margin-bottom:50px;
 			}
 
