@@ -3,7 +3,6 @@
 // Insert 
 
 $baseUrl = 'http://'.$_SERVER['HTTP_HOST'].'/?q=';
-$target = $_POST['target'];
 $code = uniqid();
 
 $query = $database->prepare('INSERT INTO urls (code, target) VALUES (:code, :target)');
@@ -13,7 +12,8 @@ $query->execute([
 ]);
 
 
-// Return content
+// On retourne une url constituée de l'adresse de base + le code généré
+// en cliquant sur celle-ci, on peut accéder au site
 
 header('Content-Type: application/json');
 die(json_encode([
