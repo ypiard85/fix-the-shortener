@@ -21,7 +21,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 	$sql = "select * from users where login = '$username' and password = '$hash'";
 	$query = $database->query($sql, PDO::FETCH_ASSOC);
 	$users = $query->fetchAll();
-	
+
 	if(isset($users[0])){
 		$_SESSION['user'] = $users[0];
 	} else {
