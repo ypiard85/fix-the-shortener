@@ -2,7 +2,6 @@
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
 		<style>
-			/* Reset du pauvre... */
 			*{
 				margin:0;
 				padding:0;
@@ -107,10 +106,10 @@
 		<script>
 			shortener.addEventListener('submit', async (e) => {
 				e.preventDefault();
-
+				// encodeURI permet de transformer la saisie en UTF-8
 				const response = await fetch('/?page=api.php&target='+encodeURI(target.value));
 				const content = await response.json();
-
+				
 				result.value = content.url;
 				result.focus();
 				result.select();
